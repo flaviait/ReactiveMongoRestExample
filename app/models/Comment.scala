@@ -6,7 +6,7 @@ import reactivemongo.bson.BSONObjectID
  * Author: Dennis Fricke
  * Date: 06.10.2014
  */
-case class Comment(_id: Option[BSONObjectID],
+case class Comment(username: String,
 								 comment: String)
 
 object Comment {
