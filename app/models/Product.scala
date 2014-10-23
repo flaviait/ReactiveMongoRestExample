@@ -10,7 +10,7 @@ import reactivemongo.bson.BSONObjectID
 case class Product(_id: Option[BSONObjectID],
 								 description: String,
 								 price: Double,
-								 comments: List[Option[Comment]],
+								 comments: Option[List[Option[Comment]]],
 								 created: Option[DateTime])
 
 object Product {

@@ -7,7 +7,7 @@
         "comments": [
             {
                 "username": "john.doe",
-                "comment": "This is really pink!"
+                "text": "This is really pink!"
             }
         ],
         "created": "2014-01-01 01:00:00"
@@ -18,9 +18,14 @@
         "comments": [
             {
                 "username": "john.doe",
-                "comment": "This is awesome"
+                "text": "This is awesome"
             }
         ],
+        "created": "2014-01-01 01:00:00"
+    },
+    {
+        "description": "Rocket Panties",
+        "price": 369.99,
         "created": "2014-01-01 01:00:00"
     }
 ]

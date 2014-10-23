@@ -56,8 +56,7 @@ object Product extends Controller with MongoController {
 	 * @return
 	 */
 	def find(id: String) = Action.async(parse.anyContent) { request =>
-		val cursor = collection.find(Json.obj("_id" -> Json.obj("$oid" -> id))).cursor[Product]
-		val futureResults = cursor.collect[List]()
+		val futureResults: Future[Option[Product]] = collection.find(Json.obj("_id" -> Json.obj("$oid" -> id))).one[Product]
 		futureResults.map {
 			case t => Ok(Json.toJson(t))
 		}

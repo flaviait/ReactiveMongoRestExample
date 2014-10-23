@@ -7,7 +7,7 @@ import reactivemongo.bson.BSONObjectID
  * Date: 06.10.2014
  */
 case class Comment(username: String,
-								 comment: String)
+								 text: String)
 
 object Comment {
 	import play.api.libs.json._
