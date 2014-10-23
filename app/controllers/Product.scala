@@ -23,7 +23,7 @@ object Product extends Controller with MongoController {
 	def post = Action.async(parse.json) { request =>
 		request.body.validate[Product].map {
 			case product => {
-				val futureResult = collection.insert(product)
+				val futureResult = collection.save(product)
 				futureResult.map {
 					case t => t.inError match {
 						case true => InternalServerError("%s".format(t))
