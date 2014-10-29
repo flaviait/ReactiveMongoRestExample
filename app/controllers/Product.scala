@@ -20,7 +20,7 @@ object Product extends Controller with MongoController {
 	 * Create a new product
 	 * @return
 	 */
-	def post = Action.async(parse.json) { request =>
+	def create = Action.async(parse.json) { request =>
 		request.body.validate[Product].map {
 			case product => {
 				val futureResult = collection.save(product)
